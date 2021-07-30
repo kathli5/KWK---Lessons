@@ -21,7 +21,7 @@ class ThirdViewController: UIViewController {
     
     @IBAction func choiceA(_ sender: Any) {answer2.text = "❌ Wrong coast, try again! ❌"
     }
-    @IBAction func choiceB(_ sender: Any) {answer2.text = "✅ MHM YOU GOT IT. ✅"
+    @IBAction func choiceB(_ sender: Any) {answer2.text = "✅ MHM 🙌 YOU GOT IT. ✅"
     }
     @IBAction func choiceC(_ sender: Any) {answer2.text = "❌ You're close but not quite there! ❌"
     }

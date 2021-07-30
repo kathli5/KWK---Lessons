@@ -35,7 +35,7 @@ class SecondViewController: UIViewController {
 
     @IBAction func choiceA(_ sender: Any) {answer1.text = "❌ This one is a Costco CLASSIC! ❌"
     }
-    @IBAction func choiceB(_ sender: Any) {answer1.text = "❌ Nope! PLEASE try this next time at Costco if you haven't already!! It's lifechanging. ❌"
+    @IBAction func choiceB(_ sender: Any) {answer1.text = "❌ Nope, try again! ❌"
     }
     @IBAction func choiceC(_ sender: Any) { answer1.text = "✅ You got it! These aren't a food court item (yet) ✅"
     }

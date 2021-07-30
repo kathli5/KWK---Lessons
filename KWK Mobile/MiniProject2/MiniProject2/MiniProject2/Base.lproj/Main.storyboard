@@ -20,7 +20,9 @@
                                 <rect key="frame" x="63" y="646" width="289" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
-                                <state key="normal" title="TAP HERE TO BEGIN"/>
+                                <state key="normal" title="TAP HERE TO BEGIN">
+                                    <color key="titleColor" red="0.051568903030000002" green="0.35652238130000002" blue="0.68238729239999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
                                 <connections>
                                     <segue destination="eDn-3E-PE5" kind="show" id="cau-OD-SD3"/>
                                 </connections>
@@ -33,11 +35,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="COSTCO TRIVIA" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nbJ-Bj-D94">
-                                <rect key="frame" x="91" y="158" width="233" height="241"/>
+                                <rect key="frame" x="91" y="211" width="233" height="241"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="40"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="40"/>
+                                <color key="textColor" red="0.99589806800000003" green="0.067030020060000001" blue="0.2077911496" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="highlightedColor" red="0.051568903030000002" green="0.35652238130000002" blue="0.68238729239999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -68,6 +70,7 @@
                                 <rect key="frame" x="172" y="235" width="77" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <color key="tintColor" red="0.051568903030000002" green="0.35652238130000002" blue="0.68238729239999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Hot Dog"/>
                                 <connections>
                                     <action selector="choiceA:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DAq-qC-vHy"/>
@@ -78,6 +81,7 @@
                                 <rect key="frame" x="149" y="303" width="123" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <color key="tintColor" red="0.051568903030000002" green="0.35652238130000002" blue="0.68238729239999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Chicken Bake"/>
                                 <connections>
                                     <action selector="choiceB:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R4G-Li-e9v"/>
@@ -88,6 +92,7 @@
                                 <rect key="frame" x="189" y="377" width="42" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <color key="tintColor" red="0.051568903030000002" green="0.35652238130000002" blue="0.68238729239999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Fries"/>
                                 <connections>
                                     <action selector="choiceC:" destination="eDn-3E-PE5" eventType="touchUpInside" id="SLn-5L-aff"/>
@@ -98,6 +103,7 @@
                                 <rect key="frame" x="87" y="668" width="244" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                                <color key="tintColor" red="0.051568903030000002" green="0.35652238130000002" blue="0.68238729239999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="NEXT QUESTION"/>
                                 <connections>
                                     <segue destination="rrl-G4-BmM" kind="show" id="4x5-LT-pnU"/>
@@ -107,6 +113,7 @@
                                 <rect key="frame" x="68" y="474" width="279" height="153"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="tintColor" red="0.051568903030000002" green="0.35652238130000002" blue="0.68238729239999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -143,6 +150,7 @@
                                 <rect key="frame" x="154" y="233" width="107" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <color key="tintColor" red="0.051568903030000002" green="0.35652238130000002" blue="0.68238729239999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Boston, MA"/>
                                 <connections>
                                     <action selector="choiceA:" destination="rrl-G4-BmM" eventType="touchUpInside" id="ImJ-Bp-13T"/>
@@ -152,6 +160,7 @@
                                 <rect key="frame" x="153" y="305" width="109" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <color key="tintColor" red="0.051568903030000002" green="0.35652238130000002" blue="0.68238729239999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Seattle, WA"/>
                                 <connections>
                                     <action selector="choiceB:" destination="rrl-G4-BmM" eventType="touchUpInside" id="8ty-YJ-u21"/>
@@ -161,6 +170,7 @@
                                 <rect key="frame" x="148" y="376" width="119" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <color key="tintColor" red="0.051568903030000002" green="0.35652238130000002" blue="0.68238729239999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Portland, OR"/>
                                 <connections>
                                     <action selector="choiceC:" destination="rrl-G4-BmM" eventType="touchUpInside" id="l9O-fZ-BVO"/>
@@ -170,6 +180,7 @@
                                 <rect key="frame" x="85" y="662" width="244" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                                <color key="tintColor" red="0.051568903030000002" green="0.35652238130000002" blue="0.68238729239999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="NEXT QUESTION"/>
                                 <connections>
                                     <segue destination="Qu0-ZZ-wa8" kind="show" id="ioH-lL-JbE"/>
@@ -179,6 +190,7 @@
                                 <rect key="frame" x="85" y="470" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="tintColor" red="0.051568903030000002" green="0.35652238130000002" blue="0.68238729239999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -215,6 +227,7 @@
                                 <rect key="frame" x="123" y="303" width="169" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <color key="tintColor" red="0.051568903030000002" green="0.35652238130000002" blue="0.68238729239999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Kirkland Signature"/>
                                 <connections>
                                     <action selector="choiceB:" destination="Qu0-ZZ-wa8" eventType="touchUpInside" id="1CE-Uv-U6P"/>
@@ -224,6 +237,7 @@
                                 <rect key="frame" x="136" y="379" width="145" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <color key="tintColor" red="0.051568903030000002" green="0.35652238130000002" blue="0.68238729239999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Member's Mark"/>
                                 <connections>
                                     <action selector="choiceC:" destination="Qu0-ZZ-wa8" eventType="touchUpInside" id="0qF-4w-fi0"/>
@@ -233,6 +247,7 @@
                                 <rect key="frame" x="159" y="661" width="98" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                                <color key="tintColor" red="0.051568903030000002" green="0.35652238130000002" blue="0.68238729239999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="FINISH"/>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" id="yWY-nL-xty"/>
@@ -242,6 +257,7 @@
                                 <rect key="frame" x="56" y="465" width="306" height="165"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="tintColor" red="0.051568903030000002" green="0.35652238130000002" blue="0.68238729239999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -250,6 +266,7 @@
                                 <rect key="frame" x="142" y="231" width="134" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <color key="tintColor" red="0.051568903030000002" green="0.35652238130000002" blue="0.68238729239999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Cost Company"/>
                                 <connections>
                                     <action selector="choiceA:" destination="Qu0-ZZ-wa8" eventType="touchUpInside" id="7wV-91-PNb"/>
