@@ -33,7 +33,7 @@ class ToDoTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -55,6 +55,13 @@ class ToDoTableViewController: UITableViewController {
         }
 
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let eachToDo = listOfToDo[indexPath.row]
+        
+        performSegue(withIdentifier: "moveToCompletedToDoVC", sender: eachToDo)
     }
 
     /*
@@ -100,7 +107,12 @@ class ToDoTableViewController: UITableViewController {
         if let nextAddToDoVC = segue.destination as?
         AddToDoViewController {
             nextAddToDoVC.previousToDoTVC = self
-
+        }
+        if let nextCompletedToDoVC = segue.destination as? CompletedToDoViewController {
+            if let choosenToDo = sender as? ToDoClass {
+                nextCompletedToDoVC.selectedToDo = choosenToDo
+                nextCompletedToDoVC.previousToDoTVC = self
+            }
         }
        }
 }

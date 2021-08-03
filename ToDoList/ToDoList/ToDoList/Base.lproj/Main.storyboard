@@ -40,10 +40,49 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <segue destination="e5N-fl-3t8" kind="show" identifier="moveToCompletedToDoVC" id="uet-AU-gJZ"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oAj-NP-Xrn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1581.1594202898552" y="62.946428571428569"/>
+        </scene>
+        <!--Completed To Do View Controller-->
+        <scene sceneID="WJi-v1-Egs">
+            <objects>
+                <viewController id="e5N-fl-3t8" customClass="CompletedToDoViewController" customModule="ToDoList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qh6-I8-WfN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ToDo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5sl-uF-mu9">
+                                <rect key="frame" x="186" y="209" width="40" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mlq-2p-bbZ">
+                                <rect key="frame" x="173" y="485" width="67" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Complete"/>
+                                <connections>
+                                    <action selector="completeTapped:" destination="e5N-fl-3t8" eventType="touchUpInside" id="VCU-TY-dYN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zqj-Vh-OHc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="O3j-Xc-hfO"/>
+                    <connections>
+                        <outlet property="toDoDisplay" destination="5sl-uF-mu9" id="CiY-kV-Xi2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4PK-cv-e5f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1607.2463768115942" y="744.64285714285711"/>
         </scene>
         <!--Add To Do View Controller-->
         <scene sceneID="ovh-yH-htf">
@@ -91,7 +130,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="xIT-e6-UrF"/>
                     <connections>
-                        <outlet property="addButtonTapped" destination="Sfl-BA-BFh" id="XjY-LI-Tv9"/>
                         <outlet property="descriptionInput" destination="eMJ-2A-iVd" id="Fsm-hS-lGY"/>
                         <outlet property="switchInput" destination="YUB-hO-dlq" id="bYl-eN-uHR"/>
                     </connections>
