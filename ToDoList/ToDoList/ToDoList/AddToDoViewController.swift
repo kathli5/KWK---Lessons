@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class AddToDoViewController: UIViewController {
     
@@ -21,16 +22,25 @@ class AddToDoViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     @IBAction func addButtonTapped(_ sender: Any) {
-        let newToDo = ToDoClass ()
-        
-        if let checkForInPut = descriptionInput.text {
-            newToDo.description = checkForInPut
-            newToDo.important = switchInput.isOn
+        guard let accessToCoreData = UIApplication.shared.delegate as? AppDelegate else {
+            return
         }
-        
-        previousToDoTVC.listOfToDo.append(newToDo)
-        previousToDoTVC.tableView.reloadData()
+        let dataFromCoreData = accessToCoreData.persistentContainer.viewContext
+        let newToDo = ToDoCD(context: dataFromCoreData)
+        newToDo.descriptionInCD = descriptionInput.text
+        newToDo.importantInCD = switchInput.isOn
+        accessToCoreData.saveContext()
         navigationController?.popViewController(animated: true)
+//        let newToDo = ToDoClass ()
+//
+//        if let checkForInPut = descriptionInput.text {
+//            newToDo.description = checkForInPut
+//            newToDo.important = switchInput.isOn
+//        }
+//
+//        previousToDoTVC.listOfToDo.append(newToDo)
+//        previousToDoTVC.tableView.reloadData()
+//        navigationController?.popViewController(animated: true)
     }
     
 

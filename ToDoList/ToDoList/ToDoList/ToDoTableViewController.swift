@@ -9,24 +9,34 @@ import UIKit
 
 class ToDoTableViewController: UITableViewController {
     
-    var listOfToDo : [ToDoClass] = []
-
-    func createToDo() -> [ToDoClass] {
-        
-        let swiftToDo = ToDoClass()
-        swiftToDo.description = "Learn Swift"
-        swiftToDo.important = true
-        
-        let dogToDo = ToDoClass()
-        dogToDo.description = "Walk the dog"
-        
-        return [swiftToDo, dogToDo]
+    var listOfToDo : [ToDoCD] = []
+    
+    func getToDos() {
+        if let accessToCoreData = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+            
+            if let dataFromCoreData = try? accessToCoreData.fetch(ToDoCD.fetchRequest()) as? [ToDoCD]{
+            
+                listOfToDo = dataFromCoreData
+                tableView.reloadData()
+            }
+        }
     }
+
+//    func createToDo() -> [ToDoClass] {
+//
+//        let swiftToDo = ToDoClass()
+//        swiftToDo.description = "Learn Swift"
+//        swiftToDo.important = true
+//
+//        let dogToDo = ToDoClass()
+//        dogToDo.description = "Walk the dog"
+//
+//        return [swiftToDo, dogToDo]
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        listOfToDo = createToDo()
         
     }
 
@@ -46,14 +56,15 @@ class ToDoTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
         
         let eachToDo = listOfToDo[indexPath.row]
-        cell.textLabel?.text = eachToDo.description
         
-        if eachToDo.important {
-            cell.textLabel?.text = "‼️" + eachToDo.description
-        } else {
-            cell.textLabel?.text = eachToDo.description
+        if let thereIsDescription = eachToDo.descriptionInCD
+    {
+            if eachToDo.importantInCD {
+                cell.textLabel?.text = "‼️" + thereIsDescription
+            } else {
+                cell.textLabel?.text = eachToDo.descriptionInCD
+            }
         }
-
         return cell
     }
     
@@ -62,6 +73,7 @@ class ToDoTableViewController: UITableViewController {
         let eachToDo = listOfToDo[indexPath.row]
         
         performSegue(withIdentifier: "moveToCompletedToDoVC", sender: eachToDo)
+        
     }
 
     /*
@@ -102,6 +114,9 @@ class ToDoTableViewController: UITableViewController {
     
     // MARK: - Navigation
 
+    override func viewWillAppear(_ animated: Bool) {
+        getToDos()
+    }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let nextAddToDoVC = segue.destination as?
@@ -109,7 +124,7 @@ class ToDoTableViewController: UITableViewController {
             nextAddToDoVC.previousToDoTVC = self
         }
         if let nextCompletedToDoVC = segue.destination as? CompletedToDoViewController {
-            if let choosenToDo = sender as? ToDoClass {
+            if let choosenToDo = sender as? ToDoCD {
                 nextCompletedToDoVC.selectedToDo = choosenToDo
                 nextCompletedToDoVC.previousToDoTVC = self
             }
